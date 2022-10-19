@@ -24,9 +24,9 @@ spec:
         resources: {}
         ports:
         - containerPort: 5000          
-      imagePullSecrets:
-        - name: regcred
         env:
           - name: BACKEND_URL
-            value: "backend-service"  
+            value: "backend-service"        
+      imagePullSecrets:
+        - name: regcred  
 status: {}
