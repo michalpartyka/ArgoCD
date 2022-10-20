@@ -26,7 +26,7 @@ spec:
         - containerPort: 5000          
         env:
           - name: BACKEND_URL
-            value: "backend-service"        
+            value: http://backend-service:5001        
       imagePullSecrets:
         - name: regcred  
 status: {}
