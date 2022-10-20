@@ -1,19 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: null
-  labels:
-    app: backend-service
   name: backend-service
-  namespace: default
 spec:
-  ports:
-  - name: 5001-5001
-    port: 5001
-    protocol: TCP
-    targetPort: 5001
   selector:
     app: backend
-  type: ClusterIP
-status:
-  loadBalancer: {}
+  ports:
+    - protocol: TCP
+      port: 5001
+      targetPort: 5001
